@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   end
 
 
-  def sta
+  def start
   end
   
   
