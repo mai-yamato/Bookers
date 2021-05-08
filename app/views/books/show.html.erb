@@ -1,18 +1,13 @@
-<html>
-  <head>
-    <title>show</title>
-  </head>
+<!DOCTYPE>
 
-  <body>
-    <p id="notice"></p>
-    <p>
-      <strong>Title</strong>
-    </p>
-    <p>
-      <strong>Body</strong>
-    </p>
-    <a class="edit" href="/books/edit">Edit</a>
+<%= form_with model:@newbook, local: true do |f| %>
+  <p>
+    <h4>Title:</h4>
+    <%= @newbook.title %>
+  </p>
+  <p>
+    <h4>Body:</h4>
+    <%= @newbook.body %>
+  </p>
 
-    <a class="back" href="/books">Back</a>
-  </body>
-</html>
+<% end %>

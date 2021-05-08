@@ -14,103 +14,25 @@
         <th>Body</th>
         <th colspan="3"></th>
       </tr>
+      
+      <% @newbooks.each do |book| %>
       <tr>
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
         <td>
-          <a class="show_275793" href="/books/275793">Show</a>
+          <%= link_to "Show", book_path(book) %>
         </td>
         <td>
-          <a class="edit_275793" href="/books/275793/edit">Edit</a>
+          <%= link_to "Edit", edit_book_path(book) %>
         </td>
         <td>
-          <a date-confirm="Are you sure?" class="destroy_275793" rel="nofollow" date-method="delete" href="/books/275793">Destroy</a>
-        </td>
+          <%= link_to "Destroy", book_path(book), method: :delete,  "data-confirm" => "本当に削除しますか？" %>
+          
+          </td>
       </tr>
-
-      <tr>
-        <td>トラブル知らずのシステム設計</td>
-        <td>システム設計の要点を図解で説明してくれます</td>
-        <td>
-          <a class="show_275794" href="/books/275794">Show</a>
-        </td>
-        <td>
-          <a class="edit_275794" href="/books/275794/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275794" rel="nofollow" date-method="delete" href="/books/275794">Destroy</a>
-        </td>
-        </tr>
-
-      <tr>
-        <td>楽しいRuby</td>
-        <td>Rubyの入門におすすめです</td>
-        <td>
-          <a class="show_275795" href="/books/275795">Show</a>
-        </td>
-        <td>
-          <a class="edit_275795" href="/books/275795/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275795" rel="nofollow" date-method="delete" href="/books/275795">Destroy</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>入門Git</td>
-        <td>gitについての基本操作から内部構造まで解説してくれます</td>
-        <td>
-          <a class="show_275796" href="/books/275796">Show</a>
-        </td>
-        <td>
-          <a class="edit_275796" href="/books/275796/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275796" rel="nofollow" date-method="delete" href="/books/275796">Destroy</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>アルゴリズム図鑑</td>
-        <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
-        <td>
-          <a class="show_275797" href="/books/275797">Show</a>
-        </td>
-        <td>
-          <a class="edit_275797" href="/books/275797/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275797" rel="nofollow" date-method="delete" href="/books/275797">Destroy</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>達人プログラマー</td>
-        <td>プログラマ入門者は必読！</td>
-        <td>
-          <a class="show_275798" href="/books/275798">Show</a>
-        </td>
-        <td>
-          <a class="edit_275798" href="/books/275798/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275798" rel="nofollow" date-method="delete" href="/books/275798">Destroy</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>データベース実践入門</td>
-        <td>効率的なSQL文を教えてくれます</td>
-        <td>
-          <a class="show_275799" href="/books/275799">Show</a>
-        </td>
-        <td>
-          <a class="edit_275799" href="/books/275799/edit">Edit</a>
-        </td>
-        <td>
-          <a date-confirm="Are you sure?" class="destroy_275799" rel="nofollow" date-method="delete" href="/books/275799">Destroy</a>
-        </td>
-      </tr>
+      
+      <% end %>
+      
 
     </table>
 

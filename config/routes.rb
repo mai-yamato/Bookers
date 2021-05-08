@@ -6,11 +6,7 @@ Rails.application.routes.draw do
 root to: 'books#start'
 
 
- get 'show' => 'books#show'
- 
- 
- get 'edit' => 'books#edit'
- 
+
  
  
 
