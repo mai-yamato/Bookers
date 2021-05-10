@@ -1,13 +1,21 @@
 <!DOCTYPE>
 
 <%= form_with model:@newbook, local: true do |f| %>
+  <%= flash[:notice] %>
+
   <p>
-    <h4>Title:</h4>
-    <%= @newbook.title %>
-  </p>
+    <strong>Title:</strong>
+     <%= @newbook.title %>
+
+  </p>  
   <p>
-    <h4>Body:</h4>
-    <%= @newbook.body %>
+    <strong>Body:</strong>
+     <%= @newbook.body %>
+
   </p>
+
+  <%= link_to "Edit", edit_book_path %>
+  |
+  <%= link_to "Back", books_path %>
 
 <% end %>
