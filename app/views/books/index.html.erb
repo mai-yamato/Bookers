@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE　html>
 
 <html>
   <head>
@@ -32,11 +32,7 @@
       </tr>
 
       <% end %>
-
-
     </table>
-
-
 
     <h3>New book</h3>
     <%= form_with model:@newbook, local:true do |f| %>
@@ -50,7 +46,7 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
     <h4>Title</h4>
     <%= f.text_field :title %>
@@ -61,6 +57,7 @@
     <p><%= f.submit 'Create Book' %></p>
 
     <% end %>
+
 
 
     </form>
